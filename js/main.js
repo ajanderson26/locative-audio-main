@@ -59,7 +59,7 @@
             map.removeLayer(locationMarker);
         }
         //adds location and accuracy information to the map
-        if (e.accuracy < 90){
+        if (e.accuracy < 1000){
             circle = L.circle(e.latlng, radius).addTo(map);
             locationMarker = L.marker(e.latlng).addTo(map);
         }
