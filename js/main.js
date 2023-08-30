@@ -157,11 +157,11 @@
                 if(layerBounds.intersects(circleBounds)){
                     //play audio and open modal if it hasn't been played before
                     if (active == false && !played.includes(layer.feature.properties.id)){
-                        //play audio
-                        playAudio(layer.feature.properties.audio)
                         //open modal
                         if (layer.feature.properties.hidden != "true")
                             openModal(layer.feature.properties)
+                        //play audio
+                        playAudio(layer.feature.properties.audio)
                         //add feature to "played" list
                         played.push(layer.feature.properties.id)
                     }
